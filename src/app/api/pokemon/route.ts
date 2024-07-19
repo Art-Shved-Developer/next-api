@@ -7,5 +7,5 @@ export async function GET(request: NextRequest) {
 
   const pokemon = await sql`SELECT * FROM pokemons WHERE name = ${query};`;
 
-  return Response.json({ pokemon: pokemon.rows[0].data })
+  return Response.json({ "pokemon": pokemon.rows[0].data})
 }
